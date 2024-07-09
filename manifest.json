@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Linkedin chrome Extension",
+    "description": "A chrome extension working as a voice assistant for Linlinkedin",
+    "version": "1.0",
+    "icons": {
+      "16": "image/linkedin-16.png",
+      "32": "image/linkedin-32.png",
+      "48": "image/linkedin-48.png",
+      "128": "image/linkedin-128.png"
+    },
+    "content_scripts":[
+    {
+      "js":["scripts/content.js"],
+      "css": ["scripts/content.css"],
+      "matches": [
+        "https://www.linkedin.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources":[{
+    "resources": ["image/save.png"],
+    "matches": ["https://www.linkedin.com/*"]
+  }]
+}
